@@ -124,6 +124,7 @@ $sm_lang = array(
 		'type' => 'Tipo',
 		'type_website' => 'Website',
 		'type_service' => 'Servicio',
+		'type_xmlschema' => 'XML-Schema',
 		'pattern' => 'Cadena de búsqueda / patrón',
 		'pattern_description' => 'Si este patrón no se encuentra en el sitio web, el servidor estará marcada sin conexión. Se permiten expresiones regulares.',
 		'last_check' => 'Ultima verificación',

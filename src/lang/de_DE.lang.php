@@ -123,6 +123,7 @@ $sm_lang = array(
 		'type' => 'Typ',
 		'type_website' => 'Webseite',
 		'type_service' => 'Service',
+		'type_xmlschema' => 'XML-Schema',
 		'pattern' => 'Suchstring/-muster',
 		'pattern_description' => 'Wenn das gesuchte Muster nicht in der Webseite ist, wird die Seite als offline markiert. Reguläre Ausdrücke sind erlaubt.',
 		'last_check' => 'Letzter Check',

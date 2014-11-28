@@ -123,6 +123,7 @@ $sm_lang = array(
 		'type' => 'Typ',
 		'type_website' => 'Web',
 		'type_service' => 'Služba',
+		'type_xmlschema' => 'XML-Schema',
 		'pattern' => 'Vyhledat řetězec/vzorek',
 		'pattern_description' => 'Pokud vzorek nebude na webu nalezen, bude server označen jako offline. Regulární výrazy jsou povoleny.',
 		'last_check' => 'Poslední kontrola',

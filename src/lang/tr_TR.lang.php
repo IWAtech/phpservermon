@@ -123,6 +123,7 @@ $sm_lang = array(
         'type' => 'Tip',
         'type_website' => 'Website',
         'type_service' => 'Servis',
+        'type_xmlschema' => 'XML-Schema',
         'pattern' => 'String/Pattern ara',
         'pattern_description' => 'Bu pattern web sitenizde bulunamaz ise, sunucu offline olarak işaretlenecek. Regular expression\'a izin verilmiştir.',
         'last_check' => 'Son kontrol',

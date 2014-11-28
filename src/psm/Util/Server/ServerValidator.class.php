@@ -88,6 +88,7 @@ class ServerValidator {
 
 		switch($type) {
 			case 'website':
+			case 'xmlschema':
 				if(!filter_var($value, FILTER_VALIDATE_URL)) {
 					throw new \InvalidArgumentException('server_ip_bad_website');
 				}

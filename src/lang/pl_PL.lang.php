@@ -123,6 +123,7 @@ $sm_lang = array(
 		'type' => 'Typ',
 		'type_website' => 'Strona',
 		'type_service' => 'Usługa',
+		'type_xmlschema' => 'XML-Schema',
 		'pattern' => 'Wyszukiwane wyrażenie/wzorzec',
 		'pattern_description' => 'Jeśli wzorzec nie zostanie odnaleziony, status zostanie ustawiony na  offline. Wyrażenia regularne są dozwolone.',
 		'last_check' => 'Ostatnie sprawdzenie',

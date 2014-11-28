@@ -244,7 +244,7 @@ class ServerController extends AbstractServerController {
 			'pushover' => in_array($_POST['pushover'], array('yes', 'no')) ? $_POST['pushover'] : 'no',
 		);
 		// make sure websites start with http://
-		if($clean['type'] == 'website' && substr($clean['ip'], 0, 4) != 'http') {
+		if(($clean['type'] == 'website' || $clean['type'] == 'xmlschema') && substr($clean['ip'], 0, 4) != 'http') {
 			$clean['ip'] = 'http://' . $clean['ip'];
 		}
 
@@ -393,6 +393,7 @@ class ServerController extends AbstractServerController {
 			'label_type' => psm_get_lang('servers', 'type'),
 			'label_website' => psm_get_lang('servers', 'type_website'),
 			'label_service' => psm_get_lang('servers', 'type_service'),
+			'label_xmlschema' => psm_get_lang('servers', 'type_xmlschema'),
 			'label_type' => psm_get_lang('servers', 'type'),
 			'label_pattern' => psm_get_lang('servers', 'pattern'),
 			'label_pattern_description' => psm_get_lang('servers', 'pattern_description'),
