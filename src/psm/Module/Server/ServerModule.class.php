@@ -32,6 +32,7 @@ use psm\Module\ModuleInterface;
 class ServerModule implements ModuleInterface {
 	public function getControllers() {
 		return array(
+			'dashboard' => __NAMESPACE__ . '\Controller\DashboardController',
 			'server' => __NAMESPACE__ . '\Controller\ServerController',
 			'log' => __NAMESPACE__ . '\Controller\LogController',
 			'status' => __NAMESPACE__ . '\Controller\StatusController',
