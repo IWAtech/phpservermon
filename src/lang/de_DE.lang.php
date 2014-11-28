@@ -63,6 +63,7 @@ $sm_lang = array(
 		'config' => 'Einstellungen',
 		'server' => 'Server',
 		'server_log' => 'Protokoll',
+		'server_dashboard' => 'Dashboard',
 		'server_status' => 'Status',
 		'server_update' => 'Update',
 		'user' => 'Benutzer',

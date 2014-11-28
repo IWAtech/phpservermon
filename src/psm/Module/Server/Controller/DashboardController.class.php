@@ -13,4 +13,13 @@ class DashboardController extends StatusController {
 
 		$this->setMinUserLevelRequired(PSM_USER_ANONYMOUS);
 	}
+
+	protected function executeIndex() {
+		$response = parent::executeIndex();
+
+		$this->twig->addGlobal('subtitle', psm_get_lang('menu', 'server_dashboard'));
+		$this->setHeaderAccessories('');
+
+		return $response;
+	}
 }
