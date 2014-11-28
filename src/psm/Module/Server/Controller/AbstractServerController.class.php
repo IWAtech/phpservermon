@@ -48,7 +48,7 @@ abstract class AbstractServerController extends AbstractController {
 		if($this->user != null && $this->user->getUserLevel() > PSM_USER_ADMIN) {
 			// restrict by user_id
 			$sql_join = "JOIN `".PSM_DB_PREFIX."users_servers` AS `us` ON (
-						`us`.`user_id`={$this->user->getUserId()}
+						`us`.`user_id`=" . ($this->user->getUserId() ?: 0) . "
 						AND `us`.`server_id`=`s`.`server_id`
 						)";
 		}
