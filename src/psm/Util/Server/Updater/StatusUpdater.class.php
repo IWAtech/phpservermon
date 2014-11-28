@@ -95,6 +95,9 @@ class StatusUpdater {
 			case 'website':
 				$this->status_new = $this->updateWebsite($max_runs);
 				break;
+			case 'xmlschema':
+				$this->status_new = $this->updateXmlSchema($max_runs);
+				break;
 		}
 
 		// update server status
@@ -219,6 +222,44 @@ class StatusUpdater {
 		}
 
 		return $result;
+	}
+
+	/**
+	 * Check the current server as a xml schema
+	 * @param int $max_runs
+	 * @param int $run
+	 * @return boolean
+	 */
+	protected function updateXmlSchema($max_runs, $run = 1) {
+		$starttime = microtime(true);
+
+		$xml_feed = psm_curl_get(
+			$this->server['ip'],
+			false,
+			true,
+			$this->server['timeout']
+		);
+		$xml_schema = psm_curl_get(
+			$this->server['pattern'],
+			false,
+			true,
+			$this->server['timeout']
+		);
+		var_dump($xml_feed);
+		file_put_contents('tests/feed.xml', $xml_feed);
+		file_put_contents('tests/updatemi.xsd', $xml_schema);
+
+		$this->rtime = (microtime(true) - $starttime);
+
+
+		$status = exec('xmllint --noout --schema tests/updatemi.xsd tests/feed.xml');
+
+		// check if server is available and rerun if asked.
+		if(!$status && $run < $max_runs) {
+			return $this->updateXmlSchema($max_runs, $run + 1);
+		}
+
+		return $status;
 	}
 
 	/**
